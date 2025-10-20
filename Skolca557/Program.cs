@@ -1,4 +1,5 @@
-﻿using Skolca557.Factory;
+﻿using Skolca557.Adapter;
+using Skolca557.Factory;
 using System;
 
 namespace Skolca557
@@ -15,7 +16,7 @@ namespace Skolca557
 
             AppSettings.Instance.PrintSettings();*/
 
-            Factory<Car> carFactory = new Factory<Car>();
+            /*Factory<Car> carFactory = new Factory<Car>();
             Factory<Bike> bikeFactory = new Factory<Bike>();
             Factory<Truck> truckFactory = new Factory<Truck>();
 
@@ -25,7 +26,10 @@ namespace Skolca557
             bike.Start();
             bike.Stop();
 
-            truckFactory.CreateVehicle().Start();
+            truckFactory.CreateVehicle().Start();*/
+
+            IShape rect = new Rectangle(0, 0, 100, 100);
+            rect.Draw();
 
             Console.ReadLine();
         }
